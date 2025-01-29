@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -10,7 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  /* Preserve existing Docusaurus variables */
+  /* Preserve Docusaurus variables */
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -21,7 +17,7 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  /* Add shadcn variables */
+  /* shadcn variables */
   --background: 0 0% 100%;
   --foreground: 222.2 47.4% 11.2%;
   --muted: 210 40% 96.1%;
@@ -46,7 +42,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  /* Preserve existing Docusaurus dark mode variables */
+  /* Preserve Docusaurus dark mode variables */
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -56,7 +52,7 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  /* Add shadcn dark mode variables */
+  /* shadcn dark mode variables */
   --background: 224 71% 4%;
   --foreground: 213 31% 91%;
   --muted: 223 47% 11%;
@@ -78,13 +74,48 @@
   --ring: 216 34% 17%;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  body {
-    @apply bg-background text-foreground;
-    /* Don't override font-sans and antialiased as Docusaurus might have its own preferences */
-  }
+/* Restore Docusaurus markdown styles */
+.markdown h1 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+  font-size: var(--ifm-h1-font-size);
+}
+
+.markdown h2 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+  font-size: var(--ifm-h2-font-size);
+}
+
+.markdown h3 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+  font-size: var(--ifm-h3-font-size);
+}
+
+.markdown h4 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+  font-size: var(--ifm-h4-font-size);
+}
+
+/* Apply shadcn base styles */
+.border-border {
+  @apply border-[hsl(var(--border))];
 }
