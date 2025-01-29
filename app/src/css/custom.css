@@ -281,3 +281,24 @@ input:focus {
 .footer__copyright {
   color: hsl(var(--muted-foreground));
 }
+
+/* Fix breadcrumb alignment */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumbs__link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumbHomeIcon_YNFT {
+  margin-top: 1px;
+  vertical-align: middle;
+}
