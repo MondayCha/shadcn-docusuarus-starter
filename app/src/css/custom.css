@@ -199,8 +199,8 @@ body {
 
 .navbar__toggle:hover,
 .navbar__link:hover {
-  color: hsl(var(--accent-foreground));
-  background-color: hsl(var(--accent));
+  color: var(--ifm-color-primary);
+  background-color: transparent;
 }
 
 /* Style cards and other content containers */
@@ -213,7 +213,7 @@ body {
 
 /* Style the theme toggle */
 .navbar__items--right>div[class*='toggle'] {
-  background-color: hsl(var(--muted));
+  background-color: transparent;
   color: hsl(var(--muted-foreground));
 }
 
@@ -273,8 +273,8 @@ input:focus {
 }
 
 .footer__link-item:hover {
-  color: hsl(var(--accent-foreground));
-  background-color: hsl(var(--accent));
+  color: var(--ifm-color-primary);
+  background-color: transparent;
   text-decoration: none;
 }
 

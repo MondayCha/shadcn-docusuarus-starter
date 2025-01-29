@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
@@ -11,45 +11,48 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Tailwind + Docusaurus',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Seamlessly integrate Tailwind CSS with Docusaurus while preserving all the
+        default styling. Use Tailwind classes alongside Docusaurus&apos;s built-in
+        classes for maximum flexibility.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'CLI Component Installation',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Install new components effortlessly using the CLI. Everything works out of
+        the box - from setup to implementation. Just run <code>npx shadcn@latest add [name]></code> and
+        you are ready to go.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'TypeScript Ready',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Built with TypeScript from the ground up. Enjoy full type safety and
+        excellent IDE support while building your components. Props validation and
+        autocomplete work right away.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
+      <div className="flex justify-center items-center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <Heading as="h3" className="text-2xl font-bold">{title}</Heading>
         <p>{description}</p>
       </div>
     </div>

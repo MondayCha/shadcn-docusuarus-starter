@@ -2,6 +2,33 @@
 sidebar_position: 1
 ---
 
+# Introduction
+
+Welcome to the shadcn-ui + Docusaurus integration example. This project demonstrates how to seamlessly integrate [shadcn-ui](https://ui.shadcn.com/) components within a [Docusaurus](https://docusaurus.io/) documentation site.
+
+## What is this?
+
+This is a collection of examples showing how to:
+- Set up shadcn-ui in a Docusaurus project
+- Use shadcn-ui components in MDX documentation
+- Create reusable component examples
+- Style and theme components to match your documentation
+
+## Getting Started
+
+Check out the [Components](/docs/components) section to see examples of shadcn-ui components in action. Each example demonstrates different aspects of the component library, from simple buttons to complex interactive UIs.
+
+## Examples Include:
+
+- Cookie Settings
+- Account Creation
+- Payment Forms
+- Interactive Charts
+- Chat Interface
+- And more...
+
+These examples showcase not just individual components, but also how they can be combined to create rich, interactive user interfaces.
+
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
@@ -53,7 +80,7 @@ The `npm run start` command builds your website locally and serves it through a 
 
 Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
 
-<Button>Click me</Button>
+<Button size="sm">Click me</Button>
 
 <div className="container mx-auto py-10">
   <Card>
