@@ -249,9 +249,35 @@ input:focus {
   box-shadow: 0 0 0 2px hsl(var(--ring) / 0.3);
 }
 
-/* Add this for footer links */
+/* Style the footer */
+.footer {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  border-top: 1px solid hsl(var(--border));
+}
+
+.footer--dark {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.footer__title {
+  color: hsl(var(--foreground));
+}
+
 .footer__link-item {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.footer__link-item:hover {
+  color: hsl(var(--accent-foreground));
+  background-color: hsl(var(--accent));
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: hsl(var(--muted-foreground));
 }
