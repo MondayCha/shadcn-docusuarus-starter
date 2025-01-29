@@ -22,18 +22,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: [
-          'Inter"',
-          ...fontFamily.sans
-        ],
-        jakarta: [
-          'Plus Jakarta Sans"',
-          ...fontFamily.sans
-        ],
-        mono: [
-          'Fira Code"',
-          ...fontFamily.mono
-        ]
+        sans: ["Inter", ...fontFamily.sans],
+        jakarta: ["Plus Jakarta Sans", ...fontFamily.sans],
+        mono: ["Fira Code", ...fontFamily.mono]
       },
       borderRadius: {
         lg: 'var(--radius)',
