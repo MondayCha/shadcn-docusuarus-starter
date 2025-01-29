@@ -27,7 +27,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Install new components effortlessly using the CLI. Everything works out of
-        the box - from setup to implementation. Just run <code>npx shadcn@latest add [name]></code> and
+        the box - from setup to implementation. Just run <code>npx shadcn@latest add [name]</code> and
         you are ready to go.
       </>
     ),

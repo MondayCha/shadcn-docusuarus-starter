@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
+import { Button } from '@/components/ui/button';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
@@ -18,11 +19,15 @@ function HomepageHeader() {
         </Heading>
         <p className="text-xl">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--md"
-            to="/docs/intro">
-            Check out some component examples
-          </Link>
+          <Button
+            variant="secondary"
+            size="lg"
+            asChild
+          >
+            <Link to="/docs/intro">
+              Check out some component examples
+            </Link>
+          </Button>
         </div>
       </div>
     </header>
