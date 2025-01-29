@@ -95,87 +95,80 @@ body {
 }
 
 /* Restore Docusaurus markdown styles */
-.markdown {
+.markdown h1 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+  font-size: var(--ifm-h1-font-size);
+}
 
-  /* Existing heading styles */
-  h1 {
-    color: var(--ifm-heading-color);
-    font-family: var(--ifm-heading-font-family);
-    font-weight: var(--ifm-heading-font-weight);
-    line-height: var(--ifm-heading-line-height);
-    margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
-    font-size: var(--ifm-h1-font-size);
-  }
+.markdown h2 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+  font-size: var(--ifm-h2-font-size);
+}
 
-  h2 {
-    color: var(--ifm-heading-color);
-    font-family: var(--ifm-heading-font-family);
-    font-weight: var(--ifm-heading-font-weight);
-    line-height: var(--ifm-heading-line-height);
-    margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
-    font-size: var(--ifm-h2-font-size);
-  }
+.markdown h3 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+  font-size: var(--ifm-h3-font-size);
+}
 
-  h3 {
-    color: var(--ifm-heading-color);
-    font-family: var(--ifm-heading-font-family);
-    font-weight: var(--ifm-heading-font-weight);
-    line-height: var(--ifm-heading-line-height);
-    margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
-    font-size: var(--ifm-h3-font-size);
-  }
+.markdown h4 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+  font-size: var(--ifm-h4-font-size);
+}
 
-  h4 {
-    color: var(--ifm-heading-color);
-    font-family: var(--ifm-heading-font-family);
-    font-weight: var(--ifm-heading-font-weight);
-    line-height: var(--ifm-heading-line-height);
-    margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
-    font-size: var(--ifm-h4-font-size);
-  }
+.markdown ul,
+.markdown ol {
+  margin: 0 0 var(--ifm-list-margin);
+  padding-left: var(--ifm-list-left-padding);
+}
 
-  /* Add list styles */
-  ul,
-  ol {
-    margin: 0 0 var(--ifm-list-margin);
-    padding-left: var(--ifm-list-left-padding);
-  }
+.markdown ul {
+  list-style: disc;
+}
 
-  ul {
-    list-style: disc;
-  }
+.markdown ul ul {
+  list-style: circle;
+}
 
-  ul ul {
-    list-style: circle;
-  }
+.markdown ul ul ul {
+  list-style: square;
+}
 
-  ul ul ul {
-    list-style: square;
-  }
+.markdown ol {
+  list-style: decimal;
+}
 
-  ol {
-    list-style: decimal;
-  }
+.markdown li {
+  margin: var(--ifm-list-item-margin);
+}
 
-  li {
-    margin: var(--ifm-list-item-margin);
-  }
+.markdown p {
+  margin: var(--ifm-paragraph-margin-bottom) 0;
+}
 
-  /* Add paragraph styles */
-  p {
-    margin: var(--ifm-paragraph-margin-bottom) 0;
-  }
+.markdown a {
+  color: var(--ifm-link-color);
+  text-decoration: var(--ifm-link-decoration);
+}
 
-  /* Add link styles */
-  a {
-    color: var(--ifm-link-color);
-    text-decoration: var(--ifm-link-decoration);
-  }
-
-  a:hover {
-    color: var(--ifm-link-hover-color);
-    text-decoration: var(--ifm-link-hover-decoration);
-  }
+.markdown a:hover {
+  color: var(--ifm-link-hover-color);
+  text-decoration: var(--ifm-link-hover-decoration);
 }
 
 /* Apply shadcn base styles */
@@ -199,6 +192,9 @@ body {
 .navbar__toggle,
 .navbar-sidebar__brand {
   color: hsl(var(--foreground));
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .navbar__toggle:hover,
@@ -251,4 +247,11 @@ input:focus {
   outline: none;
   border-color: hsl(var(--ring));
   box-shadow: 0 0 0 2px hsl(var(--ring) / 0.3);
+}
+
+/* Add this for footer links */
+.footer__link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
 }
